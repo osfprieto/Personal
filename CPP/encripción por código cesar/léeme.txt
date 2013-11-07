@@ -1,0 +1,16 @@
+Este programa encripta por un semi código de Cesar, incluye
+aún mas caracteres que solo los del alfabeto común, se debe
+guardar el documento de texto en la misma carpeta en la que
+se encuentra el ejecutable, luego se activa la aplicación y
+se ingresa el número de veces que se desea correr el alfabeto
+luego se ingresa el nombre del archivo que se desea encriptar
+y la aplicaión crea un archivo "encripcion.txt" con el texto
+ya encriptado. para desencriptar se debe seguir este procedimiento
+ingresando el número opsuesto al ingresado originalmente.
+el archivo a encriptar debe tener el caracter '~' al final del
+archivo en una linea aparte para que el programa funcione
+correctamente.
+
+Desarrollado por
+osfprieto ::D
+osfprieto@hotmail.com

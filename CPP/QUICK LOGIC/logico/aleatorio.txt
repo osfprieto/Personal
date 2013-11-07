@@ -1,0 +1,26 @@
+#include<stdio.h>
+#include<stdlib.h>
+#include <conio.h>
+
+
+int aletorio(char** laberinto)
+{
+	srand(time(0));
+	int f=0, c=0, f1=0, c1=0, a=219, x=20, y=80;
+	for (/*el ciclo con el que se define cuantas veces se divide el laberinto en cada sección*/)
+	{
+		x=x-f1;
+		y=y-c1;
+		f1 = rand()%19+1;
+		c1 = rand()%19+1;
+		for (f=0;f<F;f++)
+		{
+			laberinto[f][f1]=a;
+		}
+		for (c=0;c<C;c++)
+		{
+			laberinto[c1][c]=a;
+		}
+		laberinto 
+	}
+}

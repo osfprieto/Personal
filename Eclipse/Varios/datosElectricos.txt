@@ -1,0 +1,29 @@
+input
+	hp
+	Mono, bi o tri fásico - 115 o 230
+	longitud
+	cobre o aluminio
+	aplicación del cable (ambiente) - lista 9 condiciones (Seco y húmedo, seco, muy húmedo, húmedo)
+output
+	FC = IR
+	AWG
+	I
+	R
+
+I sale de la tabla de relación con HP con relación al 115 o 230 del input
+
+tenemos una matriz espacial (tres dimensiones), la primera cara es para cobre y la segunda es para aluminio(input),
+las primeras columnas tienen unas relaciones de amperaje, dependiendo de la aplicación del cable (input)
+cuando se encuentra el valor en la columna indicada que es mayor pero más cercano a la corriente I que se da de
+la tabla de HP, tomamos el valor que está en la última columna, donde se indica el AWG
+
+aparte tenemos una relación de AWG contra resistencia para longitud de mil metros
+buscamos con el AWG que obtuvimos antes, y encontramos la resistencia r0 para un
+cable de 1000 metros. la resistencia r que queremos está dada por la longitud Linput de la manera
+
+r/Linput = r0/1000
+r = (Linput*r0)/1000
+
+teniendo r e I, usamos ley de ohm (v=ir) y obtenemos el deltaE que es dE = V = IR
+mostramos FC = de/Et
+donde Et es el input del motor

@@ -1,0 +1,29 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{system("cls");
+int a=0;
+printf("QUICK LOGIC\n\n\n\n\n");
+printf("menu de opciones\n\n\n");
+printf("1.seleccion del muneco a usar\n");
+printf("2.seleccion del color del muñeco y paredes\n");
+printf("3.seleccion de color de fondo en la pantalla\n");
+printf("4.volver al menu anterior\n\n");
+printf("que desea cambiar??? ");
+scanf("%d",a);
+
+if (a==1)
+{}
+if (a==2)
+{}
+if (a==3)
+{}
+
+
+
+
+  
+  system("PAUSE");	
+  return 0;
+}

@@ -1,0 +1,319 @@
+Game 1:
+Player 1:0
+Player 2:0
+Player 3:6(W)
+Center:3
+
+Game 2:
+Player 1:1
+Player 2:4
+Player 3:1
+Player 4:4(*)
+Player 5:4
+Center:1
+
+Game 3:
+Player 1:0
+Player 2:0
+Player 3:2(*)
+Player 4:5
+Center:5
+
+Game 4:
+Player 1:0
+Player 2:1
+Player 3:0
+Player 4:3(*)
+Player 5:2
+Player 6:1
+Player 7:1
+Player 8:1
+Player 9:3
+Player 10:2
+Center:16
+
+Game 5:
+Player 1:3
+Player 2:3(*)
+Player 3:3
+Player 4:3
+Player 5:3
+Player 6:3
+Player 7:3
+Player 8:3
+Player 9:3
+Center:0
+
+Game 6:
+Player 1:0
+Player 2:1
+Player 3:2
+Player 4:0
+Player 5:1(*)
+Player 6:5
+Player 7:1
+Player 8:5
+Center:9
+
+Game 7:
+Player 1:1
+Player 2:0
+Player 3:0
+Player 4:1(*)
+Player 5:1
+Player 6:1
+Player 7:0
+Center:17
+
+Game 8:
+Player 1:1
+Player 2:0
+Player 3:0
+Player 4:2
+Player 5:0
+Player 6:1(*)
+Player 7:0
+Center:17
+
+Game 9:
+Player 1:2
+Player 2:3(*)
+Player 3:3
+Player 4:3
+Player 5:3
+Player 6:4
+Center:0
+
+Game 10:
+Player 1:0
+Player 2:0
+Player 3:0
+Player 4:3(*)
+Player 5:1
+Center:11
+
+Game 11:
+Player 1:2
+Player 2:1
+Player 3:0
+Player 4:4
+Player 5:1
+Player 6:2(*)
+Player 7:2
+Player 8:5
+Player 9:1
+Center:9
+
+Game 12:
+Player 1:0
+Player 2:4
+Player 3:0
+Player 4:2
+Player 5:1
+Player 6:1
+Player 7:0
+Player 8:2(*)
+Player 9:1
+Center:16
+
+Game 13:
+Player 1:0
+Player 2:4
+Player 3:0
+Player 4:0
+Player 5:0
+Player 6:1
+Player 7:0
+Player 8:0
+Player 9:2
+Player 10:1(*)
+Center:22
+
+Game 14:
+Player 1:1
+Player 2:1
+Player 3:2(*)
+Player 4:5
+Player 5:1
+Player 6:0
+Player 7:3
+Center:8
+
+Game 15:
+Player 1:3
+Player 2:1
+Player 3:1
+Player 4:1
+Player 5:3
+Player 6:1
+Player 7:2(*)
+Player 8:1
+Player 9:1
+Center:13
+
+Game 16:
+Player 1:0
+Player 2:1
+Player 3:1
+Player 4:4(*)
+Player 5:0
+Player 6:3
+Center:9
+
+Game 17:
+Player 1:3
+Player 2:1
+Player 3:3
+Player 4:1
+Player 5:4(*)
+Center:3
+
+Game 18:
+Player 1:2
+Player 2:1
+Player 3:1(*)
+Player 4:0
+Player 5:2
+Player 6:3
+Center:9
+
+Game 19:
+Player 1:2
+Player 2:1
+Player 3:1(*)
+Player 4:3
+Player 5:1
+Player 6:0
+Player 7:0
+Player 8:2
+Center:14
+
+Game 20:
+Player 1:1
+Player 2:4(*)
+Player 3:1
+Player 4:0
+Player 5:0
+Player 6:0
+Center:12
+
+Game 21:
+Player 1:1
+Player 2:1
+Player 3:2(*)
+Player 4:3
+Player 5:0
+Player 6:0
+Center:11
+
+Game 22:
+Player 1:1
+Player 2:2(*)
+Player 3:6
+Player 4:1
+Center:2
+
+Game 23:
+Player 1:0
+Player 2:0
+Player 3:3
+Player 4:1
+Player 5:0
+Player 6:9(*)
+Player 7:1
+Player 8:1
+Center:9
+Game 24:
+Player 1:0
+Player 2:0
+Player 3:2(W)
+Center:7
+
+Game 25:
+Player 1:0
+Player 2:0
+Player 3:0
+Player 4:0
+Player 5:3
+Player 6:0
+Player 7:0
+Player 8:0
+Player 9:0
+Player 10:3(*)
+Center:24
+
+Game 26:
+Player 1:0
+Player 2:0
+Player 3:0
+Player 4:0
+Player 5:3(*)
+Player 6:0
+Player 7:0
+Player 8:0
+Player 9:0
+Player 10:3
+Center:24
+
+Game 27:
+Player 1:0
+Player 2:0
+Player 3:0
+Player 4:0
+Player 5:3(*)
+Player 6:0
+Player 7:0
+Player 8:0
+Player 9:0
+Player 10:3
+Center:24
+
+Game 28:
+Player 1:0
+Player 2:0
+Player 3:0
+Player 4:0
+Player 5:3(*)
+Player 6:0
+Player 7:0
+Player 8:0
+Player 9:0
+Player 10:3
+Center:24
+
+Game 29:
+Player 1:0
+Player 2:0
+Player 3:0
+Player 4:0
+Player 5:3
+Player 6:0
+Player 7:0
+Player 8:0
+Player 9:0
+Player 10:3(*)
+Center:24
+
+Game 30:
+Player 1:3(*)
+Player 2:3
+Player 3:3
+Center:0
+
+Game 31:
+Player 1:3(*)
+Player 2:3
+Player 3:3
+Center:0
+
+Game 32:
+Player 1:3
+Player 2:3(*)
+Player 3:3
+Center:0
+
+Game 33:
+Player 1:3
+Player 2:0
+Player 3:6(*)
+Center:0

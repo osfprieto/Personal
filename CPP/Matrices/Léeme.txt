@@ -1,0 +1,42 @@
+OPERACIONES ENTRE MATRICES
+
+Todos los nombres de los archivos ingesados en el programa
+deben de tener la extensión ".txt" en el nombre para que el
+programa funcione correctamente, para cada función del programa
+se debe crear un archivo de texto diferente, ya que el mismo es
+leído de distintas maneras con respecto a la función seleccionada:
+
+
+	SUMA Y DIFERENCIA
+
+	Para adicionar o restar matrices el archivo debe tener
+	dos números iniciales que indiquen el tamaño de las dos
+	matrices a operar (ambas matrices deben medir lo mismo)
+	seguido de la primera matriz con sus respectivas columnas
+	y filas; mas abajo irá la segunda matriz (bien sea para
+	adicionar o restar)
+
+	MULTIPLICACION
+
+	Para multiplicar dos matrices el archivo debe tener tres
+	números iniciales que indican el tamaño de las dos
+	matrices, el primero indica la cantidad de filas de la
+	primera matriz, el segundo indica la cantidad de columnas
+	de la primera fila matriz y la cantdiad de filas de la
+	segunda matriz, mientras que el tercero indica la cantidad
+	de columnas de la seguna matriz. Después de esto, irán
+	las dos matrices (la segunda debajo de la primera) de la
+	misma manera que como se plantea en la suma y la diferencia
+
+	SOLUCIÓN DE SISTEMA DE ECUACIONES POR GAUSS JORDAN
+
+	Este archivo debe iniciar con un número que indica el
+	tamaño de la matriz, solo es uno ya que esta matrices
+	tienen una columna mas como filas tienen, seguido irá
+	la matriz planteada al plantear las ecuaciones
+
+	INVERSA
+
+	El archivo que se usará en esta función debe ser iniciado
+	por el número de filas y columnas de la matriz(solo uno)
+	después estará la matriz a invertir

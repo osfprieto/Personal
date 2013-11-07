@@ -1,0 +1,42 @@
+# Project: QUICK LOGIC
+# Makefile created by Dev-C++ 4.9.9.2
+
+CPP  = C:\Dev-Cpp\Bin\g++.exe
+CC   = C:\Dev-Cpp\Bin\gcc.exe
+WINDRES = C:\Dev-Cpp\Bin\windres.exe
+RES  = QUICK_LOGIC_private.res
+OBJ  = archivos.o interfazGrafica.o logica.o "QUICK\ LOGIC.o" $(RES)
+LINKOBJ  = archivos.o interfazGrafica.o logica.o "QUICK LOGIC.o" $(RES)
+LIBS =  -L"C:/Dev-Cpp/lib"  C:/Dev-Cpp/lib/libwinmm.a  
+INCS =  -I"C:/Dev-Cpp/include" 
+CXXINCS =  -I"C:/Dev-Cpp/lib/gcc/mingw32/3.4.2/include"  -I"C:/Dev-Cpp/include/c++/3.4.2/backward"  -I"C:/Dev-Cpp/include/c++/3.4.2/mingw32"  -I"C:/Dev-Cpp/include/c++/3.4.2"  -I"C:/Dev-Cpp/include" 
+BIN  = "QUICK LOGIC.exe"
+CXXFLAGS = $(CXXINCS)  
+CFLAGS = $(INCS)  
+RM = rm -f
+
+.PHONY: all all-before all-after clean clean-custom
+
+all: all-before "QUICK LOGIC.exe" all-after
+
+
+clean: clean-custom
+	${RM} $(OBJ) $(BIN)
+
+$(BIN): $(OBJ)
+	$(CC) $(LINKOBJ) -o "QUICK LOGIC.exe" $(LIBS)
+
+archivos.o: archivos.c
+	$(CC) -c archivos.c -o archivos.o $(CFLAGS)
+
+interfazGrafica.o: interfazGrafica.c
+	$(CC) -c interfazGrafica.c -o interfazGrafica.o $(CFLAGS)
+
+logica.o: logica.c
+	$(CC) -c logica.c -o logica.o $(CFLAGS)
+
+"QUICK\ LOGIC.o": QUICK\ LOGIC.c
+	$(CC) -c "QUICK LOGIC.c" -o "QUICK LOGIC.o" $(CFLAGS)
+
+QUICK_LOGIC_private.res: QUICK_LOGIC_private.rc 
+	$(WINDRES) -i QUICK_LOGIC_private.rc --input-format=rc -o QUICK_LOGIC_private.res -O coff 
