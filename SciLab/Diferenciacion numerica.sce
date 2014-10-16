@@ -1,5 +1,5 @@
 //ofprietoc@unal.edu.co
-//
+//angarciariv@unal.edu.co
 
 //Desarrollo profesor
 function demoSegundaDer()
@@ -51,7 +51,7 @@ function realizarPrueba(h, x_inicial, x_final)
     disp(derivadaReal)
     disp("Valores aproximados de la derivada d/dx(cos(x)) = -sin(x)")
     disp(derivadaAproximada)
-    disp("Error de la aprximación")
+    disp("Error de la aproximación")
     disp(errorAproximacion)
     disp("Promedio de los errores")
     disp(mean(errorAproximacion))
