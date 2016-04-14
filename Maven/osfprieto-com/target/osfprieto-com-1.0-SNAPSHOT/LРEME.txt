@@ -1,0 +1,14 @@
+Este sitio funciona mejor con una conexión de internet activa ya que
+hay contenido que es descargado de algunos sitios de terceros.
+
+Referencias usadas para la creación del sitio:
+	http://www.robotstxt.org/
+	http://www.w3schools.com/
+	https://dev.twitter.com/web/embedded-timelines/user
+	https://www.facebook.com/badges/
+	https://developer.linkedin.com/plugins/member-profile
+	http://laumania.net/2014/12/25/embed-github-profile-card/
+	http://stackoverflow.com/questions/9209217/how-to-embed-a-youtube-channel-into-a-webpage
+	https://developers.google.com/+/web/badge/
+
+Últimas versiones disponibles en http://www.osfprieto.com

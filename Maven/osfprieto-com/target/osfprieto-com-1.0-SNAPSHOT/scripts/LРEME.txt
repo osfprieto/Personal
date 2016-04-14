@@ -1,0 +1,2 @@
+Estos scripts fueron tomados de sus ubicaciones originales
+para agregar widgets a algunas de las páginas del sitio.
