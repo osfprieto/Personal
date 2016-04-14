@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Alien Starships</title>
+	<script src="juego.js"></script>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+	<meta name="keywords" content="osfprieto, alien starships, simple javascript game"/>
+	<meta name="contents" content="HTML, CSS, JavaScript"/>
+	<meta name="author" content="Omar Simon Francisco Prieto Chacon"/>
+	<meta charset="UTF-8"/>
+</head>
+<body onload="iniciar()">
+	<canvas id="canvas" onclick="manejarEvento(event, 0)" ontouchstart="manejarEvento(event, 1)" width="1024px" height="600px">
+	</canvas>
+	<audio autoplay loop id="audio" src="audio/intro.mp3" type="audio/mpeg">
+		Tu explorador no soporta la etiqueta de audio.
+	</audio>
+</body>
+</html>
