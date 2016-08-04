@@ -1,5 +1,3 @@
-package mios;
-
 import java.io.IOException;
 import java.io.OutputStream;
 import java.net.InetSocketAddress;
@@ -13,7 +11,15 @@ import com.sun.net.httpserver.HttpServer;
 public class HttpServerImpl {
 
     public static void main(String[] args) throws Exception {
-        HttpServer server = HttpServer.create(new InetSocketAddress(314), 0);
+    	int port = 5314;
+    	if(args.length>=1){
+    		try{
+    			port = Integer.parseInt(args[0]);
+    		} catch(Exception e){
+    			
+    		}
+    	}
+        HttpServer server = HttpServer.create(new InetSocketAddress(port), 0);
         server.createContext("/", new MyHandler());
         server.setExecutor(null); // creates a default executor
         server.start();
@@ -24,6 +30,16 @@ public class HttpServerImpl {
         public void handle(HttpExchange exchange) throws IOException {    	
             String res = "OK";
             exchange.sendResponseHeaders(200, res.length());
+            
+            // Temp start
+            exchange.getRequestHeaders().add("Server", "Apache/2.2.16 (Debian)");
+            exchange.getRequestHeaders().add("X-Powered-By", "PHP/5.3.3-7+squeeze14");
+            exchange.getRequestHeaders().add("Content-Length", "4");
+            exchange.getRequestHeaders().add("Keep-Alive", "timeout=15, max=100");
+            exchange.getRequestHeaders().add("Connection", "Keep-Alive");
+            exchange.getRequestHeaders().add("Content-Type", "text/html");
+            // Temp end
+            
             OutputStream os = exchange.getResponseBody();
             os.write(res.getBytes());
             os.close();
