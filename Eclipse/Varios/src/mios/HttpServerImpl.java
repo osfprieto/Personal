@@ -1,5 +1,3 @@
-package mios;
-
 import java.io.IOException;
 import java.io.OutputStream;
 import java.net.InetSocketAddress;
@@ -25,28 +23,17 @@ public class HttpServerImpl {
         server.createContext("/", new MyHandler());
         server.setExecutor(null); // creates a default executor
         server.start();
+        System.out.println("Listening on port "+port);
     }
 
     static class MyHandler implements HttpHandler {
         @Override
-        public void handle(HttpExchange exchange) throws IOException {    	
-            String res = "OK";
-            exchange.sendResponseHeaders(200, res.length());
-            
-            // Temp start
-            exchange.getRequestHeaders().add("Server", "Apache/2.2.16 (Debian)");
-            exchange.getRequestHeaders().add("X-Powered-By", "PHP/5.3.3-7+squeeze14");
-            exchange.getRequestHeaders().add("Content-Length", "4");
-            exchange.getRequestHeaders().add("Keep-Alive", "timeout=15, max=100");
-            exchange.getRequestHeaders().add("Connection", "Keep-Alive");
-            exchange.getRequestHeaders().add("Content-Type", "text/html");
-            // Temp end
-            
-            OutputStream os = exchange.getResponseBody();
-            os.write(res.getBytes());
-            os.close();
-            
-            StringBuffer sb = new StringBuffer();
+        public void handle(HttpExchange exchange) throws IOException {
+        	System.out.println("Request received");
+        	
+        	// Request
+        	
+        	StringBuffer sb = new StringBuffer();
             sb.append("Remote address: ").append(exchange.getRemoteAddress().toString()).append("\n");
             sb.append("Protocol: ").append(exchange.getProtocol()).append("\n");
             sb.append("Method: ").append(exchange.getRequestMethod()).append("\n");
@@ -68,6 +55,23 @@ public class HttpServerImpl {
             sb.append("Request body end-------\n");
             
             System.out.println(sb.toString());
+            
+            //Response
+            
+            // Temp start
+            exchange.getResponseHeaders().add("Server", "Apache/2.2.16 (Debian)");
+            exchange.getResponseHeaders().add("X-Powered-By", "PHP/5.3.3-7+squeeze14");
+            exchange.getResponseHeaders().add("Keep-Alive", "timeout=15, max=100");
+            exchange.getResponseHeaders().add("Connection", "Keep-Alive");
+            exchange.getResponseHeaders().add("Content-Type", "text/html");
+            // Temp end
+            
+            String res = "OK";
+            exchange.sendResponseHeaders(200, res.length());
+            
+            OutputStream os = exchange.getResponseBody();
+            os.write(res.getBytes());
+            os.close();
         }
     }
 
