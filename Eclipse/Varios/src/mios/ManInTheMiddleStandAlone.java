@@ -1,21 +1,20 @@
-package mios;
-
 import java.io.File;
 import java.io.FileOutputStream;
-import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
 import java.net.ServerSocket;
 import java.net.Socket;
-import java.util.ArrayList;
 
 public class ManInTheMiddleStandAlone {
 
 	private static int peekedPort = 6314;
-	private static String redirectHost = "localhost";// "190.26.196.134";  // /mcip/index.php
+	private static String redirectHost = "190.26.196.134";  // /mcip/index.php
 	private static int redirectPort = 80;
 	private static String requestsFile = "requests.txt";
 	private static String responsesFile = "responses.txt";
+	
+	private static FileOutputStream requestsFos;
+	private static FileOutputStream responsesFos;
 	
 	
 	public static void main(String[] args) {
@@ -37,6 +36,8 @@ public class ManInTheMiddleStandAlone {
 
 		try{
 			ServerSocket peekedServerSocket = new ServerSocket(peekedPort);
+			requestsFos = new FileOutputStream(new File (requestsFile));
+			responsesFos = new FileOutputStream(new File(responsesFile));
 			while(true){
 				Socket peekedSocket = peekedServerSocket.accept();
 				PeekedClient peekedClient = new PeekedClient(peekedSocket);
@@ -44,7 +45,7 @@ public class ManInTheMiddleStandAlone {
 				thread.start();
 			}
 		}catch (Exception e){
-			
+			e.printStackTrace();
 		}
 	}
 	
@@ -81,7 +82,6 @@ public class ManInTheMiddleStandAlone {
 					public void run(){
 						byte[] b = new byte[1024];
 						try{
-							FileOutputStream requestsFos = new FileOutputStream(new File (requestsFile));
 							int readCount = clientToServerInputStream.read(b, 0, 1024);
 							while(readCount>=0){
 								System.out.println("Request received");
@@ -93,7 +93,6 @@ public class ManInTheMiddleStandAlone {
 							clientToServerInputStream.close();
 							serverToRedirectedOutputStream.flush();
 							serverToRedirectedOutputStream.close();
-							requestsFos.close();
 						} catch (Exception e){
 							e.printStackTrace();
 						}
@@ -105,7 +104,6 @@ public class ManInTheMiddleStandAlone {
 					public void run(){
 						byte[] b = new byte[1024];
 						try{
-							FileOutputStream responsesFos = new FileOutputStream(new File(responsesFile));
 							int readCount = redirectedToServerInputStream.read(b, 0, 1024);
 							while(readCount>=0){
 								System.out.println("Response received");
@@ -117,7 +115,6 @@ public class ManInTheMiddleStandAlone {
 							redirectedToServerInputStream.close();
 							serverToClientOutputStream.flush();
 							serverToClientOutputStream.close();
-							responsesFos.close();
 						} catch (Exception e){
 							e.printStackTrace();
 						}
