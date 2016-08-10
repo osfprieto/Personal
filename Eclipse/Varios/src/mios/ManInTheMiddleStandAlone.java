@@ -1,5 +1,3 @@
-package mios;
-
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.InputStream;
@@ -9,6 +7,8 @@ import java.net.Socket;
 
 public class ManInTheMiddleStandAlone {
 
+	private static final int BUFFER_SIZE = 8192;
+	
 	private static int peekedPort = 6314;
 	private static String redirectHost = "190.26.196.134";  // /mcip/index.php
 	private static int redirectPort = 80;
@@ -82,18 +82,20 @@ public class ManInTheMiddleStandAlone {
 				Thread upThread = new Thread(new Runnable(){
 					@Override
 					public void run(){
-						byte[] b = new byte[1024];
+						byte[] b = new byte[BUFFER_SIZE];
 						try{
-							int readCount = clientToServerInputStream.read(b, 0, 1024);
+							int readCount = clientToServerInputStream.read(b, 0, BUFFER_SIZE);
 							while(readCount>=0){
 								System.out.println("Request received");
-								requestsFos.write(b, 0, readCount);
+								requestsFos.write(b, 0, readCount); // We log the original data sent from the peeked client
 								requestsFos.flush();
-								serverToRedirectedOutputStream.write(b, 0, readCount);
-								readCount = clientToServerInputStream.read(b, 0, 1024);
+								String temp = new String(b, 0, readCount);
+								temp = temp.replaceAll("Host: \\d+\\.\\d+\\.\\d+\\.\\d+:\\d+", "Host: "+redirectHost+":"+redirectPort);
+								serverToRedirectedOutputStream.write(temp.getBytes(), 0, temp.getBytes().length); // We send an updated request to the server 
+								serverToRedirectedOutputStream.flush();
+								readCount = clientToServerInputStream.read(b, 0, BUFFER_SIZE);
 							}
 							clientToServerInputStream.close();
-							serverToRedirectedOutputStream.flush();
 							serverToRedirectedOutputStream.close();
 						} catch (Exception e){
 							e.printStackTrace();
@@ -104,18 +106,18 @@ public class ManInTheMiddleStandAlone {
 				Thread downThread = new Thread(new Runnable(){
 					@Override
 					public void run(){
-						byte[] b = new byte[1024];
+						byte[] b = new byte[BUFFER_SIZE];
 						try{
-							int readCount = redirectedToServerInputStream.read(b, 0, 1024);
+							int readCount = redirectedToServerInputStream.read(b, 0, BUFFER_SIZE);
 							while(readCount>=0){
 								System.out.println("Response received");
 								responsesFos.write(b, 0, readCount);
 								responsesFos.flush();
 								serverToClientOutputStream.write(b, 0, readCount);
-								readCount = redirectedToServerInputStream.read(b, 0, 1024);
+								serverToClientOutputStream.flush();
+								readCount = redirectedToServerInputStream.read(b, 0, BUFFER_SIZE);
 							}
 							redirectedToServerInputStream.close();
-							serverToClientOutputStream.flush();
 							serverToClientOutputStream.close();
 						} catch (Exception e){
 							e.printStackTrace();
