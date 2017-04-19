@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDgCNZQJLi4n0nEoQUO-SvTTq1m02GZcZw"></script>
+<script type="text/javascript" src="logic.js"></script>
+<link rel="stylesheet" type="text/css" href="styles.css" />
+<title>What's my speed?</title>
+</head>
+<body onload="init()">
+<div class="container">
+	<div>Your speed is</div>
+	<div class="container">
+		<div class="speed"><span class="value" id="msecond">-</span> m/s</div>
+		<div class="speed"><span class="value" id="ftsecond">-</span> ft/s</div>
+		<div class="speed"><span class="value" id="kmhour">-</span> Km/H</div>
+		<div class="speed"><span class="value" id="mlhour">-</span> miles/H</div>
+	</div>
+	<div id="map"></div>
+</div>
+<div>Built by <a href="https://www.fb.com/osfprieto">osfprieto</a>. All rights reserved.</div>
+</body>
+</html>

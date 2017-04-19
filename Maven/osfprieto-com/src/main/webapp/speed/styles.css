@@ -1,0 +1,39 @@
+* {
+	color:yellow;
+	text-decoration:none;
+}
+
+html, body {
+	height:100%;
+	font-family:Helvetica;
+	background-color:red;
+}
+
+a {
+	font-style:italic;
+}
+
+.container {
+	border-style:solid;
+	border-width:5px;
+	border-color:yellow;
+	border-radius: 25px;
+	padding:15px;
+	margin:15px 0px 15px 0px;
+
+	text-align:center;	
+}
+
+.value {
+	font-weight:bold;
+}
+
+.speed {
+	font-style:italic;
+}
+
+#map {
+	height:400px;
+	width:100%;
+	border-radius: 25px;
+}
