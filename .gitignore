@@ -1,0 +1,7 @@
+*.exe
+bin/
+.settings/
+*.jar
+.project
+.classpath
+thumbs.db
