@@ -14,7 +14,7 @@
         <app.java.version>java8</app.java.version>
         <appengine.version>1.9.71</appengine.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <appengine-maven-plugin-version>1.3.2</appengine-maven-plugin-version>
+        <appengine-maven-plugin-version>2.2.0</appengine-maven-plugin-version>
     </properties>
 
     <prerequisites>
