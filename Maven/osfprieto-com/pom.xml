@@ -9,12 +9,12 @@
     <artifactId>osfprieto-com</artifactId>
 
     <properties>
-        <app.id>osfprieto-com</app.id>
-        <app.version>1</app.version>
-        <app.java.version>java8</app.java.version>
+        <appengine.app.id>osfprieto-com</appengine.app.id>
+        <appengine.app.version>1</appengine.app.version>
+        <appengine.app.java.version>java8</appengine.app.java.version>
         <appengine.version>1.9.71</appengine.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <appengine-maven-plugin-version>2.2.0</appengine-maven-plugin-version>
+        <appengine-maven-plugin.version>2.2.0</appengine-maven-plugin.version>
     </properties>
 
     <prerequisites>
@@ -59,7 +59,11 @@
             <plugin>
                 <groupId>com.google.cloud.tools</groupId>
                 <artifactId>appengine-maven-plugin</artifactId>
-                <version>${appengine-maven-plugin-version}</version>
+                <version>${appengine-maven-plugin.version}</version>
+                <configuration>
+                    <deploy.projectId>${appengine.app.id}</deploy.projectId>
+                    <deploy.version>${appengine.app.version}</deploy.version>
+                </configuration>
             </plugin>
         </plugins>
     </build>
