@@ -2,6 +2,12 @@
 
 Maven - Google App Engine project. [Reference](https://cloud.google.com/appengine/docs/standard/java/maven-reference)
 
+## Generate credentials
+
+```
+mvn appengine:cloudSdkLogin
+```
+
 ## Build
 
 ```
