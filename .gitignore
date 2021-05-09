@@ -1,8 +1,9 @@
 *.exe
-bin/
-.settings/
 *.jar
-.project
+.settings/
 .classpath
-thumbs.db
+.project
+bin/
+node_modules/
 target/
+thumbs.db
