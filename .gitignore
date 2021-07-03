@@ -2,6 +2,7 @@
 *.jar
 .settings/
 .classpath
+.metadata/
 .project
 bin/
 node_modules/
