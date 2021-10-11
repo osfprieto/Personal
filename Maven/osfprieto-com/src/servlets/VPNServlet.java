@@ -12,5 +12,7 @@ public class VPNServlet extends HttpServlet {
 		// Actual logic goes here.
 		PrintWriter out = response.getWriter();
 		out.println("<h1>kmas</h1>");
+		out.flush();
+		out.close();
 	}
 }
