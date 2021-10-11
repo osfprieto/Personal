@@ -3,6 +3,14 @@
 <welcome-file-list>
 	<welcome-file>index.html</welcome-file>
 </welcome-file-list>
+<servlet>
+   <servlet-name>VPNServlet</servlet-name>
+   <servlet-class>servlets.VPNServlet</servlet-class>
+</servlet>
+<servlet-mapping>
+   <servlet-name>VPNServlet</servlet-name>
+   <url-pattern>/tunnel</url-pattern>
+</servlet-mapping>
 <security-constraint>
     <web-resource-collection>
         <web-resource-name>everything</web-resource-name>
