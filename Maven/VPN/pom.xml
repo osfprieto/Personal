@@ -5,8 +5,8 @@
     <packaging>war</packaging>
     <version>1.0-SNAPSHOT</version>
 
-    <groupId>com.osfprieto.www</groupId>
-    <artifactId>osfprieto-com</artifactId>
+    <groupId>com.osfprieto.vpn</groupId>
+    <artifactId>osfprieto-vpn</artifactId>
 
     <properties>
         <appengine.app.id>osfprieto-vpn</appengine.app.id>
